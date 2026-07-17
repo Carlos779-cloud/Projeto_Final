@@ -24,7 +24,7 @@ Durante o projeto foram realizadas etapas de:
 
 ## Vídeo de demonstração
 
-[Assista à demonstração do projeto](COLE_AQUI_O_LINK_DO_VIDEO)
+[Assista à demonstração do projeto](https://share.vidyard.com/watch/LdxweJ314FWeidFqC7Auw5)
 
 ---
 
