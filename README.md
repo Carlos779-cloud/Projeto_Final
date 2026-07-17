@@ -50,10 +50,6 @@ cd Projeto_Final
 
 ### 2. Criar um ambiente virtual
 
-No terminal:
-
-```bash
-python -m venv venv
 ```
 
 Ative o ambiente virtual.
@@ -61,18 +57,24 @@ Ative o ambiente virtual.
 No Windows:
 
 ```bash
+python -m venv venv
 venv\Scripts\activate
 ```
 
 ---
+No Linux
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
 
 ### 3. Instalar as bibliotecas
 
 Execute:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn jupyter
-```
+pip install -r requirements.txt
 
 ---
 
