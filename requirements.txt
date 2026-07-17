@@ -20,7 +20,7 @@ lightgbm==4.6.0
 matplotlib==3.11.0
 matplotlib-inline==0.2.2
 narwhals==2.23.0
-nest-asyncio==1.7.2
+nest-asyncio
 numpy==2.5.1
 packaging==26.2
 pandas==3.0.3
