@@ -1,39 +1,87 @@
-# Projeto Final - Manutenção Preditiva
+Análise de Vendas PY
+Sobre o projeto
+O SalesInsight PY é um pipeline completo de análise de dados de vendas desenvolvido em Python. O sistema lê, limpa, transforma e visualiza um conjunto de dados de vendas, gerando métricas, segmentações e projeções simples de tendência.
 
-Este projeto faz a análise de manutenção preditiva usando um conjunto de dados de sensores de máquinas industriais.
+Vídeo de demonstração
+[( https://drive.google.com/file/d/1Qr4tY0xXJDXS7UqQx9lhcko6wNV99m-5/view?usp=sharing )]
 
-## Estrutura do projeto
+O que o sistema analisa
+Receita total e volume de vendas por mês e trimestre
+Principais produtos e categorias por receita
+Desempenho por região
+Segmentação de clientes por nível de gasto (Bronze, Prata, Ouro)
+Projeção simples de tendência para os próximos meses
+Exportação de relatórios em CSV e JSON
+Objetivo
+Praticar os principais conceitos do Módulo 01 de IA para Análise Preditiva:
 
-- `main.ipynb`: notebook com análise exploratória, pré-processamento, balanceamento de classes, treinamento de modelos e visualizações.
-- `manutencao_preditiva.csv`: base de dados original.
-- `requirements.txt`: dependências Python necessárias para reproduzir a análise.
-- `imagens/`: gráficos gerados pelo notebook.
+Lógica de programação com Python
+Variáveis, tipos de dados e operadores
+Condicionais (if, elif, else) e reprodução (for, while)
+Funções, parâmetros, retorno e funções lambda
+Funções de ordem superior (função que recebe função)
+Leitura e escrita de arquivos CSV e JSON
+Módulo datetime para manipulação de dados
+Expressões regulares com o módulo re
+Pandas: DataFrames, limpeza, groupby, filtros e transformações
+NumPy: arrays, operações vetorizadas, radiodifusão, np.select
+Matplotlib e Seaborn: gráficos, customização e exportação em PNG
+Classes, construtores, atributos, métodos, herança e super()
+GitHub, ramificações, commits e GitFlow simplificados
+Kanban para organização do projeto
+Estrutura do projeto:
+SalesInsight_PY/
+│
+├── data/                           
+│   ├── raw/                        # Dados sintéticos brutos gerados
+│
+├── notebooks/                      # Espaço de experimentação
+|
+├──outputs                          # Saidas geradas pelo código
+|
+├── src/                            # Codigo Produtivo
+│   ├── __init__.py                 # Transforma a pasta src num pacote Python
+│   ├── pipeline.py                 # Classes do Pipeline de Dados
+│   ├── utils.py                    # Funções
+│
+├── main.py                         # Importa do src e executa tudo
+├── .gitignore                      # Proteção de arquivos 
+├── requirements.txt                # Bibliotecas necessárias 
+└── README.md                       # Documentação do projeto
 
-## Pontos de atenção
+Como executar o projeto (Via VS Code)
+Este guia foi estruturado para que o projeto possa ser executado de forma idêntica tanto em ambiente Linux (Ubuntu) quanto Windows , utilizando o VS Code como interface padrão.
 
-1. O conjunto é altamente desbalanceado. O notebook usa SMOTE para balancear a classe `falha_maquina` no conjunto de treinamento.
-2. Para o modelo KNN, o conjunto numérico é escalonado com `StandardScaler` antes do treinamento.
-3. Há comparações entre KNN, Decision Tree e Random Forest, sendo a Random Forest o modelo final com avaliação de matriz de confusão.
+1. Clonar o Repositório e Abrir no VS Code
+Abra seu terminal de preferência e execute os comandos para baixar o projeto e abra-lo diretamente no VS Code:
 
-## Como executar
+git clone https://github.com/Carlos779-cloud/Mini_Projeto.git
+2. Instalar um ambiente virtual e as Bibliotecas Necessárias
+Com o projeto aberto no VS Code, abra o terminal integrado do IDE (atalho: Ctrl + ' ou indo no menu superior em Terminal > Novo Terminal) e execute os comandos abaixo para instalar as dependências do projeto:
 
-1. Crie e ative um ambiente virtual:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-2. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Abra o notebook:
-   ```bash
-   jupyter notebook main.ipynb
-   ```
-4. Execute as células na ordem para garantir que o pré-processamento e os modelos sejam carregados corretamente.
+python -m venv venv
+e em seguida
 
-## Resumo Executivo
+pip install -r requirements.txt
+3. Executar o Pipeline Principal
+Para rodar todo o ecossistema (geração de dados sintéticos, limpeza e análises), você tem duas opções simples no VS Code:
 
-A análise compara três abordagens de classificação (KNN, Decision Tree, Random Forest) para detecção de falhas em equipamentos industriais. A melhor configuração encontrada foi uma Random Forest com `max_depth=5`, que apresentou bom recall (prioritário para reduzir falhas não detectadas) com um aumento de falsos positivos que deve ser avaliado no contexto operacional.
+Opção A (Via Terminal do VS Code)
+Digite o comando abaixo e pressione Enter:
 
-Veja o detalhamento das conclusões e recomendações operacionais em [CONCLUSION.md](CONCLUSION.md).
+python main.py
+Opção B (Via Interface Visual):
+
+1 Abra o arquivo main.py na barra lateral do VS Code.
+
+2 Clique no botão Play (Run Python File) localizado no canto superior direito da tela.
+
+Órfão Utilizado
+Visual Studio Code
+Jupyter Notebook
+Python
+Git
+GitHub
+
+Autor
+Carlos João Reinert
